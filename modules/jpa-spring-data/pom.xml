@@ -13,9 +13,6 @@
   <packaging>jar</packaging>
   <name>${project.artifactId}</name>
   <description>Spring-data infrastructure for the Open Application Standard Platform for Java (devon4j).</description>
-  <properties>
-    <java.version>1.8</java.version>
-  </properties>
 
   <dependencies>
     <dependency>

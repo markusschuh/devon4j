@@ -20,16 +20,15 @@
   </modules>
 
   <properties>
-    <java.version>1.8</java.version>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
     <revision>dev</revision>
     <changelist>-SNAPSHOT</changelist>
     <devon4j.version>${revision}${changelist}</devon4j.version>
     <devon4j.flatten.mode>oss</devon4j.flatten.mode>
-    <spring.boot.version>2.1.2.RELEASE</spring.boot.version>
+    <spring.boot.version>2.1.4.RELEASE</spring.boot.version>
     <javadoc.option.doclint></javadoc.option.doclint>
-    <maven.archetype.version>3.0.1</maven.archetype.version>
+    <maven.archetype.version>3.1.0</maven.archetype.version>
   </properties>
 
   <build>
@@ -49,8 +48,8 @@
         <artifactId>maven-compiler-plugin</artifactId>
         <configuration>
           <encoding>${project.build.sourceEncoding}</encoding>
-          <source>${java.version}</source>
-          <target>${java.version}</target>
+          <source>1.8</source>
+          <target>1.8</target>
         </configuration>
       </plugin>
 
@@ -158,32 +157,32 @@
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-resources-plugin</artifactId>
-          <version>3.0.2</version>
+          <version>3.1.0</version>
         </plugin>
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-compiler-plugin</artifactId>
-          <version>3.8.0</version>
+          <version>3.8.1</version>
         </plugin>
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-install-plugin</artifactId>
-          <version>2.5.2</version>
+          <version>3.0.0-M1</version>
         </plugin>
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-deploy-plugin</artifactId>
-          <version>2.8.2</version>
+          <version>3.0.0-M1</version>
         </plugin>
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-clean-plugin</artifactId>
-          <version>3.0.0</version>
+          <version>3.1.0</version>
         </plugin>
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-jar-plugin</artifactId>
-          <version>3.0.2</version>
+          <version>3.1.1</version>
         </plugin>
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
@@ -193,7 +192,7 @@
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-site-plugin</artifactId>
-          <version>3.7</version>
+          <version>3.7.1</version>
         </plugin>
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
@@ -208,23 +207,23 @@
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-project-info-reports-plugin</artifactId>
-          <version>2.9</version>
+          <version>3.0.0</version>
         </plugin>
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-jxr-plugin</artifactId>
-          <version>2.5</version>
+          <version>3.0.0</version>
         </plugin>
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-javadoc-plugin</artifactId>
-          <version>3.0.0</version>
+          <version>3.1.0</version>
           <configuration>
             <additionalDependencies>
               <additionalDependency>
                 <groupId>javax.interceptor</groupId>
                 <artifactId>javax.interceptor-api</artifactId>
-                <version>1.2</version>
+                <version>1.2.2</version>
               </additionalDependency>
             </additionalDependencies>
             <!-- https://issues.apache.org/jira/browse/MJAVADOC-308 -->
@@ -237,7 +236,6 @@
               <additionalOption>${javadoc.option.doclint}</additionalOption>
             </additionalOptions>
             <links>
-              <link>http://docs.oracle.com/javase/7/docs/api/</link>
               <link>http://m-m-m.sourceforge.net/apidocs/</link>
             </links>
             <doctitle>JavaDocs for ${project.name}</doctitle>
@@ -247,7 +245,7 @@
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-surefire-plugin</artifactId>
-          <version>2.22.0</version>
+          <version>3.0.0-M3</version>
           <configuration>
             <!-- force locale to en_EN or tests will fail in other locales -->
             <argLine>-Duser.language=en -Duser.region=EN</argLine>
@@ -258,12 +256,12 @@
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-surefire-report-plugin</artifactId>
-          <version>2.20.1</version>
+          <version>3.0.0-M3</version>
         </plugin>
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-pmd-plugin</artifactId>
-          <version>3.9.0</version>
+          <version>3.12.0</version>
           <configuration>
             <targetJdk>${java.version}</targetJdk>
           </configuration>
@@ -271,7 +269,7 @@
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-war-plugin</artifactId>
-          <version>3.2.0</version>
+          <version>3.2.2</version>
         </plugin>
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
@@ -281,7 +279,7 @@
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-help-plugin</artifactId>
-          <version>2.2</version>
+          <version>3.2.0</version>
         </plugin>
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
@@ -331,7 +329,7 @@
         <plugin>
           <groupId>org.jacoco</groupId>
           <artifactId>jacoco-maven-plugin</artifactId>
-          <version>0.8.0</version>
+          <version>0.8.3</version>
         </plugin>
         <plugin>
           <groupId>org.owasp</groupId>
@@ -341,7 +339,7 @@
         <plugin>
           <groupId>org.springframework.boot</groupId>
           <artifactId>spring-boot-maven-plugin</artifactId>
-          <version>2.0.4.RELEASE</version>
+          <version>2.1.4.RELEASE</version>
         </plugin>
       </plugins>
     </pluginManagement>
@@ -368,7 +366,7 @@
             <additionalDependency>
               <groupId>javax.interceptor</groupId>
               <artifactId>javax.interceptor-api</artifactId>
-              <version>1.2</version>
+              <version>1.2.2</version>
             </additionalDependency>
           </additionalDependencies>
           <!--<notree>true</notree> -->
@@ -380,9 +378,6 @@
           <additionalOptions>
             <additionalOption>${javadoc.option.doclint}</additionalOption>
           </additionalOptions>
-          <links>
-            <link>http://docs.oracle.com/javase/7/docs/api/</link>
-          </links>
           <doctitle>JavaDocs for ${project.name}</doctitle>
           <windowtitle>JavaDocs for ${project.name}</windowtitle>
         </configuration>
@@ -471,7 +466,7 @@
                   <additionalDependency>
                     <groupId>javax.interceptor</groupId>
                     <artifactId>javax.interceptor-api</artifactId>
-                    <version>1.2</version>
+                    <version>1.2.2</version>
                   </additionalDependency>
               </additionalDependencies>
             </configuration>
