@@ -15,8 +15,7 @@ The JDK exists in different editions:
 
 As Java is evolving and also complex maintaining a JVM requires a lot of energy.
 Therefore many alternative JDK editions are unable to cope with this and support latest Java versions and according compatibility.
-Unfortunately OpenJDK only maintains a specific version of Java for a relative short period of time before moving to the next major version.
-In the end, this technically means that OpenJDK is continuous beta and can not be used in production for reasonable software projects.
+OpenJDK maintains a specific major version of Java for six months before moving to the next major version. This technically means that OpenJDK can not be used in production software projects, what typically need a stable version over a far longer time window.
 As OracleJDK changed its licensing model and can not be used for commercial usage even during development, things can get tricky.
 You may want to use OpenJDK for development and OracleJDK only in production.
 However, e.g. OpenJDK 11 never released a version that is stable enough for reasonable development (e.g. javadoc tool is https://bugs.openjdk.java.net/browse/JDK-8212233[broken] and fixes are not available of OpenJDK 11 - fixed in 11.0.3 what is only available as OracleJDK 11 or you need to go to OpenJDK 12+, what has other bugs) so in the end there is no working release of OpenJDK 11.
